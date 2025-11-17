@@ -8,6 +8,17 @@
             "mainClass": "spotlight.config_server.ConfigServerApplication",
             "projectName": "config-server",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=63269 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=config-server"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RegistryServerApplication<registry-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "spotlight.registry_server.RegistryServerApplication",
+            "projectName": "registry-server",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]
